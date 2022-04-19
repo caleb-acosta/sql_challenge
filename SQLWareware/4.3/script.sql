@@ -1,0 +1,1 @@
+select users.name, users.handle, count(user_skills.skill_id) as skill_count from users join user_skills on users.id=user_skills.user_id where enabled group by users.name, users.handle order by skill_count limit 10;

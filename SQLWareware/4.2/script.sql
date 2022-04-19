@@ -1,0 +1,1 @@
+select name, handle from users join user_skills on users.id=user_skills.user_id where skill_id=1 and (level='competent' or level='proficient' or level='expert') and name in (select name from users join user_skills on users.id=user_skills.user_id where skill_id=13);
